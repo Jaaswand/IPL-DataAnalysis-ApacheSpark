@@ -63,12 +63,4 @@ The notebook reads CSVs from S3 (you can change paths if needed):
 
 ---
 
-## 🧪 Key Transformations & Queries (Examples)
 
-**Typed Schemas:** `StructType` for robust CSV reads (dates, integers, booleans).
-
-**Filters:**  
-Exclude non-legal deliveries for certain analyses:
-```python
-from pyspark.sql.functions import col
-ball_by_ball_df = ball_by_ball_df.filter((col("wides") == 0) & (col("noballs") == 0))
